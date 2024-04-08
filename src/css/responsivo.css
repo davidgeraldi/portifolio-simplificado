@@ -30,9 +30,11 @@
     .home .informacoes p{
         font-size: 16px;
     }
-
+    .home .container-foto{
+        margin-left: 57px;
+    }
     .home .container-foto img{
-        max-width: 500px;
+        max-width: 450px;
     }
 
     .projetos{

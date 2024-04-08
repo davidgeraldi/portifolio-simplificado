@@ -1,0 +1,42 @@
+@media(max-width: 1280px){/*significa que a partir do momento que a janela seja menor que 1280px aplica as regras:*/
+
+    .cabecalho{
+        padding: 30px;
+    }
+
+    .home{
+        flex-direction: column;/*deixa os itens em ordem de coluna, titulo, textos, foto*/
+        align-items: center;
+        margin: 50px 0;
+        gap: 30px;
+    }
+
+    .home .informacoes{
+        max-width: 100%;/*largura maxima de 100% para que o texto ocupe toda a tela de outros dispositivos*/
+        text-align: center;/*alinha o texto no centro*/
+        align-items: center;
+    }
+
+    .projetos .container-projetos{
+        padding: 30px;
+    }
+}
+
+@media(max-width: 425px){
+    .home .informacoes h1{
+        font-size: 30px;
+    }
+
+    .home .informacoes p{
+        font-size: 16px;
+    }
+
+    .home .container-foto img{
+        max-width: 500px;
+    }
+
+    .projetos{
+        padding: 30px;
+    }
+
+}

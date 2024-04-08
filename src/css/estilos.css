@@ -1,0 +1,277 @@
+html {
+    color: #fff;
+    /*deixa todos os texto do html brancos*/
+    scroll-behavior: smooth;
+    /*colocar efeito na rolagem ao clicar em meus projetos do lado superior esquerdo. deixa a rolagem mais suave*/
+}
+
+body {
+    /*deixa o fundo do site da cor especificada*/
+    font-family: "Poppins", sans-serif;
+    /*muda a fonte do site*/
+    margin: 0 auto;
+    /*centraliza a margem, para os elementos ficarem no centro*/
+    max-width: 1120px;
+    /*estabele uma largura para os elementos*/
+    background: linear-gradient(150deg, #000, #9e00ff);
+    background-size: 120% 120%;
+}
+
+.cabecalho {
+    /*estilizando o elemento que tem como classe cabecalho*/
+    display: flex;
+    /*serve para colocar os elementos do lado um do outro*/
+    justify-content: space-between;
+    /*coloca um espaço entre os elementos contidos*/
+    align-items: center;
+    /*centraliza verticalmente os elementos dentro do cabecalho*/
+    padding: 30px 15px;
+    /*da um espaço interno na area do cabecalho*/
+}
+
+.cabecalho .logo {
+    /*estilizar a classe logo que esta dentro da classe cabecalho*/
+    width: 65px;
+    /*largura da area*/
+    height: 65px;
+    /*altura da area*/
+    border-radius: 50%;
+    /*deixa a area do elemento em formato circular*/
+    border: 2px solid #fff;
+    /*cria uma borda na area circular*/
+    text-decoration: underline;
+    /*deixa o texto sublinhado*/
+    text-align: center;
+    /*centraliza o texto dentro da area definida*/
+    line-height: 55px;
+    /*deixa exatamente no centro do circulo*/
+    font-family: "Raleway", sans-serif;
+    /*muda a fonte do texto*/
+    transition: 0.3s;
+    /*deixa a transição do efeito com "delay" de 2 segundos*/
+}
+
+.cabecalho a:hover .logo {
+    /*quando o usuario passar o mouse em cima da logo fazer:*/
+    color: #9443d8;
+    /*cor definida*/
+    border: 2px solid #9443d8;
+    /*cor da borda definida*/
+}
+
+.cabecalho .menu li a {
+    /*estilizar a tag a, dentro da tag li, dentro da classe menu dentro da classe cabecalho*/
+    font-size: 20px;
+    /*aumenta o tamanho da fonte*/
+    text-transform: capitalize;
+    /*coloca a primeira letra das palavra em maiuscula. se for pra sem em caps lock o comando é "uppercase"*/
+    padding: 10px 20px;
+    /*da um espaço interno na area do elemento*/
+    transition: 0.3s;
+    /*efeito de transicao/delay*/
+}
+
+.cabecalho .menu li a:hover {
+    /*quando o usuario passar o mouse em cima do elemento fazer:*/
+    background-color: #9443d8;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.home {
+    display: flex;
+    /*elementos organizados lado a lado*/
+    min-height: calc(100vh - 125px);
+    /*altura minima para fazer preencher a janela principal, função calc. o 100vh é a altura total da janela e o 125px a altura do cabecalho*/
+    align-items: center;
+    /*centraliza os elemento na area definida*/
+    gap: 50px;
+    /*separa os elementos entre si*/
+    justify-content: space-between;
+}
+
+.home .informacoes {
+    display: flex;
+    flex-direction: column;
+    /*o row deixa em linha, o column em colunas*/
+    gap: 15px;
+    letter-spacing: 2px;
+    /*da um espaçamento entre as letras*/
+    padding: 0 15px;
+    /*area do bloco*/
+    max-width: 50%;
+    /*largura maxima*/
+}
+
+.home .informacoes h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 45px;
+    /*tamanho da fonte*/
+    margin-bottom: 20px;
+    /*separa o titulo dos paragrafos*/
+}
+
+.home .informacoes p {
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.home .redes-sociais {
+    display: flex;
+    gap: 20px;
+}
+
+.home .redes-sociais a i {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.home .redes-sociais a i:hover {
+    color: #9443d8;
+    border: 1px solid #9443d8;
+    transform: scale(1.1);
+    /*da um zoom ao passar o mouse por cima*/
+}
+
+.home .container-foto .foto {
+    max-width: 80%;
+    border-radius: 15%;
+}
+
+.home .container-foto img {
+    width: 100%;
+    border-radius: 15%;
+}
+
+.home .foto.sombra-interna {
+    background: linear-gradient(to right, #8a35c8, #18C063, #00EEA2);
+    /*site mdn */
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;/*ativa a animação para fazer as cores ficar mudando*/
+}
+
+.projetos {
+    padding: 70px 0 70px;
+    /*70 em cima, 70 embaixo e 0 dos lados*/
+}
+
+.projetos .titulo {
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.projetos .container-projetos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /*pega a largura da tela e coloca os projetos, colocando embaixo do outr*/
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.projetos .projeto {
+    max-width: 260px;
+    max-height: 500px;
+    position: relative;
+    display: none;
+    /*esconde todos os projetos*/
+}
+
+.projetos .projeto.ativo {
+    display: block;
+    /*mostra apenas os projetos ativos*/
+}
+
+.projetos .projeto img {
+    height: 100%;
+    /*a imagem colocada sempre vai ocupar 100% do espaço*/
+}
+
+.projetos .projeto h3 {
+    background-color: #040203;
+    width: 100%;
+    padding-left: 20px;
+    /*espaçamento a esquerda*/
+    padding-bottom: 10px;
+    /* espaçamento abaixo*/
+    padding-top: 10px;
+    /*espaçamento acima*/
+    position: absolute;
+    /*coloca o titulo em cima da imagem. para isso a div pai(projetos.projeto) deve conter a position:relative*/
+    bottom: 0;
+    /*mexe na posicao do bloquinho projeto*/
+}
+
+.projetos .projeto .informacoes-projeto {
+    background-color: #040203;
+    position: absolute;
+    top: 0;
+    /*coloca o texto na parte de cima da img*/
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    /*deixa a fonte mais forte*/
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projeto {
+    /*quando passar o mouse em cima do texto "projeto feito em html e css" vai fazer:*/
+    opacity: 0.7;
+    /*mostra o texte que havia sido escondido*/
+    background-color: #040203;
+}
+
+.projetos .btn-mostrar-projetos {
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /*muda o cursos(seta do mouse) para a maozinha*/
+}
+
+.projetos .btn-mostrar-projetos:hover {
+    background-color: #9443d8;
+    transition: 0.3s;
+}
+
+.projetos .btn-mostrar-projetos.remover {
+    display: none;
+    /*faz com que quando o botao mostrar mais for clicado ele receba o valor none, fazendo-o sumir da tela(isso é feito em js)*/
+}
+
+/*criando uma animaçaõ: para fazer o fundo colorido da foto mexer*/
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

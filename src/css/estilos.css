@@ -13,7 +13,7 @@ body {
     /*centraliza a margem, para os elementos ficarem no centro*/
     max-width: 1120px;
     /*estabele uma largura para os elementos*/
-    background: linear-gradient(150deg, #000, #9e00ff);
+    background: linear-gradient(150deg, #000, #4000ff);
     background-size: 120% 120%;
 }
 
@@ -151,7 +151,7 @@ body {
 }
 
 .home .foto.sombra-interna {
-    background: linear-gradient(to right, #8a35c8, #18C063, #00EEA2);
+    background: linear-gradient(to right, #4000ff, #18C063, #00EEA2);
     /*site mdn */
     background-size: 180% 180%;
     animation: gradient-animation 5s ease infinite;/*ativa a animação para fazer as cores ficar mudando*/
